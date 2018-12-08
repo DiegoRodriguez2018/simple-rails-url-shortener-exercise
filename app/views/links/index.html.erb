@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Url</th>
-      <th>Ditly-Url</th>
+      <th>Short-Url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= link.url %></td>
         
-        <td><%= link.id.to_s(36) %></td>
+        <td>localhost:3000/<strong><%=link.id.to_s(36)%></td></strong>
 
 
         <td><%= link_to 'Show', link %></td>
