@@ -1,32 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Links</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Url</th>
-      <th>Short-Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-lg-4 col-md-offset-5"></div>
+  
+  
+  <div class="col-lg-4 col-md-offset-5">
+      <h1 class="display-4">Url-Shortener</h1>
+      <h1 class="font-weight-light text-justify">Do you have a long url? Just add it to our database to get a short link.</h5>
 
-  <tbody>
-    <% @links.each do |link| %>
-      <tr>
-        <td><%= link.url %></td>
-        <td>
-        <a href="http://localhost:3000/<%=link.id.to_s(36)%>">
-        localhost:3000/<strong><%=link.id.to_s(36)%></strong>
-        </a>
-        </td>
-        <td><%= link_to 'Edit', edit_link_path(link) %></td>
-        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <table class="table-striped">
+          <thead>
+            <tr>
+              <th>Url</th>
+              <th>Short-Url</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @links.each do |link| %>
+              <tr>
+                <td><%= link.url %></td>
+                <td><a href="http://localhost:3000/<%=link.id.to_s(36)%>">
+                localhost:3000/<strong><%=link.id.to_s(36)%></strong>
+                </a></td>
 
-<br>
+                <td><%= link_to 'Show', link%></td>
 
-<%= link_to 'New Link', new_link_path %>
+                <td><%= link_to 'Edit', edit_link_path(link) %></td>
+                
+                <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        
+        <br>
+        
+        <%= link_to 'New Link', new_link_path, class:"new-link btn btn-outline-primary" %>
+  </div>
+
+
+  <div class="col-lg-4 col-md-offset-5"></div>
+</div>
+
+
