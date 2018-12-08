@@ -2,7 +2,7 @@
 
 <h1>Links</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Url</th>
@@ -15,11 +15,11 @@
     <% @links.each do |link| %>
       <tr>
         <td><%= link.url %></td>
-        
-        <td>localhost:3000/<strong><%=link.id.to_s(36)%></td></strong>
-
-
-        <td><%= link_to 'Show', link %></td>
+        <td>
+        <a href="http://localhost:3000/<%=link.id.to_s(36)%>">
+        localhost:3000/<strong><%=link.id.to_s(36)%></strong>
+        </a>
+        </td>
         <td><%= link_to 'Edit', edit_link_path(link) %></td>
         <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
