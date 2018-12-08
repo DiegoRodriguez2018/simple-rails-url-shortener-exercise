@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'faker'
+
 Link.delete_all
 
-Link.create([{
-   url: "test.com.au"
-}])
+(1..200).each do 
+    Link.create([{
+    url: Faker::Internet.url
+    }])
+end
 
 
