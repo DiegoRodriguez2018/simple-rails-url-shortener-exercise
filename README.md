@@ -21,4 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Screenshots
+  ![](2018-12-08-15-38-33.png)
+
+  ![](2018-12-08-15-39-27.png)
+  

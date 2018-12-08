@@ -2,19 +2,19 @@
 
 
 <div class="row">
-  <div class="col-lg-4 col-md-offset-5"></div>
+  <div class="col-lg-3 col-md-offset-5"></div>
   
   
-  <div class="col-lg-4 col-md-offset-5">
+  <div class="col-lg-6 col-md-offset-5">
       <h1 class="display-4">Url-Shortener</h1>
-      <h1 class="font-weight-light text-justify">Do you have a long url? Just add it to our database to get a short link.</h5>
+      <h1 class="font-weight-light text-justify">Do you have a long url? Just add it to our database to get a short one.</h5>
 
       <table class="table-striped">
           <thead>
             <tr>
               <th>Url</th>
               <th>Short-Url</th>
-              <th colspan="3"></th>
+              <th colspan="2"></th>
             </tr>
           </thead>
         
@@ -26,11 +26,10 @@
                 localhost:3000/<strong><%=link.id.to_s(36)%></strong>
                 </a></td>
 
-                <td><%= link_to 'Show', link%></td>
 
-                <td><%= link_to 'Edit', edit_link_path(link) %></td>
+                <td><%= link_to 'Edit', edit_link_path(link) , class: "btn btn-outline-primary"%></td>
                 
-                <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Delete', link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %></td>
               </tr>
             <% end %>
           </tbody>
@@ -38,11 +37,11 @@
         
         <br>
         
-        <%= link_to 'New Link', new_link_path, class:"new-link btn btn-outline-primary" %>
+        <%= link_to 'Add your Url', new_link_path, class:"new-link btn btn-outline-primary" %>
   </div>
 
 
-  <div class="col-lg-4 col-md-offset-5"></div>
+  <div class="col-lg-3 col-md-offset-5"></div>
 </div>
 
 
